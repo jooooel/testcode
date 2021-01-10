@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: my-hello-world
-  name: my-hello-world
+    app: my-rabbitmq
+  name: my-rabbitmq
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-hello-world
+      app: my-rabbitmq
   template:
     metadata:
       labels:
-        app: my-hello-world
+        app: my-rabbitmq
     spec:
       containers:
-      - image: hello-world
-        name: my-hello-world
+      - image: rabbitmq
+        name: my-rabbitmq
