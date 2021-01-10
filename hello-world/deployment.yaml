@@ -2,20 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: my-nginx
-  name: my-nginx
+    app: my-hello-world
+  name: my-hello-world
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-nginx
+      app: my-hello-world
   template:
     metadata:
       labels:
-        app: my-nginx
+        app: my-hello-world
     spec:
       containers:
-      - image: nginx
-        name: my-nginx
-        ports:
-          - containerPort: 80
+      - image: hello-world
+        name: my-hello-world
